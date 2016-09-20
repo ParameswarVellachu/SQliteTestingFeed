@@ -18,8 +18,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    
-    
     //Get file on a background thread to stop GUI locking up
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://rss.dinamalar.com/json/iphone2_1/Weather_cc.asp"]];    //Could obviously be a .json file too
